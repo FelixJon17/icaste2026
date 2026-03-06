@@ -26,7 +26,8 @@
     </div>
 </header>
 
-<section class="section">
+<main>
+    <div class="section">
     <h1>CONTACT US</h1>
     <div class="contact-box">
 
@@ -38,9 +39,9 @@
 
         <p>Contact Person:</p>
         <p>Wulan (+62) 815-8433-6003</p>
-
+        </div>
     </div>
-</section>
+</main>
 
 <footer>
     Copyright ICEBSH - Universitas Tarumanagara 2026

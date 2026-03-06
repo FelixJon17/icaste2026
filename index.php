@@ -25,10 +25,10 @@
     </div>
 </header>
 
-<div class="hero-banner">
+<section class="hero-banner">
     <img src="img/icebsh1.png" alt="ICEBSH Banner">
-</div>
-<main>
+</section>
+
 <section class="section">
     <h1>SPEAKERS</h1>
     <div class="content-box">
@@ -40,18 +40,18 @@
 <section class="section">
     <h1>SCHEDULE</h1>
     <div class="content-box">
-        <p><strong>Full Paper Submission Deadline:</strong> February 28, March 13, 2026</p>
-        <p><strong>Notification of Acceptance:</strong> March 10, March 20, 2026</p>
-        <p><strong>Full Paper Submission:</strong> March 20, March 27, 2026</p>
-        <p><strong>Registration Schedule:</strong> March 25, March 30, 2026</p>
+        <p><strong>Full Paper Submission Deadline:</strong><del>  February 28</del>, March 13, 2026</p>
+        <p><strong>Notification of Acceptance:</strong><del>  March 10</del>, March 20, 2026</p>
+        <p><strong>Full Paper Submission:</strong><del>  March 20</del>, March 27, 2026</p>
+        <p><strong>Registration Schedule:</strong><del>  March 25</del>, March 30, 2026</p>
         <p><strong>Conference Date:</strong> April 6-7, 2026</p>
 
         <br>
-        <p><strong>Conference Agenda:</strong></p>
+        <p><strong>The conference Agenda will be divided into two stages:</strong></p>
         <ol>
-            <li>Plenary Session with Plenary Speakers</li>
-            <li>Parallel Sessions in breakout rooms (Online Platform)</li>
-            <li>Networking opportunities for collaboration</li>
+            <li>Plenary Session, to participate in talks and discussions with the Plenary Speakers</li>
+            <li>Parallel Sessions, according to the sub-topics of the conference, will be held in breakout rooms on the Online Platform</li>
+            <li>Networking opportunities dedicated time for participants to build connections and collaborate</li>
         </ol>
     </div>
 </section>
@@ -59,13 +59,19 @@
 <section class="partners">
     <div class="partner-item">
         <h3>ORGANIZED BY</h3>
-        <p>Tarumanagara University</p>
+        <p>
+            <a href="https://untar.ac.id" target="_blank">
+            Universitas Tarumanagara</a>
+        </p>
         <img src="img/untar.png" alt="">
     </div>
 
     <div class="partner-item">
         <h3>CO-HOST BY</h3>
-        <p>Kun Shan University</p>
+        <p>
+            <a href="https://untar.ac.id" target="_blank">
+            Kun Shan University</a>
+        </p>
         <img src="img/kunshan.png" alt="">
     </div>
 </section>

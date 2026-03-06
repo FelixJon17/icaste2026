@@ -11,36 +11,36 @@ body {
     color: #222;
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 .navbar {
     background: #ffffff;
-    border-bottom: 3px solid #0056b3; /* garis biru bawah navbar */
+    border-bottom: 1px solid #c0c0c0;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: auto;
-    padding: 15px 20px;
+    padding: 8px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo img {
-    height: 50px;
+    height: 50px; 
 }
 
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 15px;
 }
 
 .nav-menu li a {
     text-decoration: none;
     color: #000;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 300;
+    font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: 0.3s;
@@ -57,28 +57,25 @@ body {
 /* ===== BANNER ===== */
 .hero-banner {
     width: 100%;
-    height: 100vh;              /* tinggi 1 layar penuh */
-    overflow-x: auto;           /* bisa geser kiri kanan */
+    height: 120vh;         
+    overflow-x: auto;           
     overflow-y: hidden;
+    cursor: grab;
 }
 
 .hero-banner img {
     width: 100%;
-    min-width: 1200px;          /* supaya bisa digeser di layar kecil */
+    min-width: 1200px;          
     height: 100%;
-    object-fit: cover;          /* biar tidak gepeng */
+    object-fit: cover;          
     display: block;
-}
-
-.hero-banner {
-    cursor: grab;
 }
 
 .hero-banner.active {
     cursor: grabbing;
 }
 
-/* ==== ALT BANNER ==== */
+/* ==== ALT BANNER  */
 .alt-banner {
     width: 100vw;
     overflow-x: auto; 
@@ -88,23 +85,22 @@ body {
 .alt-banner img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     display: block;
     min-width: 1200px;
 }
 
-/* Responsive Mobile */
 @media (max-width: 768px) {
     .hero-banner {
         height: 60vh;
     }
 
     .hero-banner img {
-        min-width: 1000px;      /* biar bisa swipe kiri kanan di HP */
+        min-width: 1000px;  
     }
 }
 
-/* ===== SECTION UTAMA*/
+/* SECTION UTAMA*/
 .section {
     padding: 60px 20px;
     max-width: 1000px;
@@ -112,10 +108,11 @@ body {
 }
 
 .section h1 {
-    font-size: 28px;
-    margin-bottom: 25px;
-    text-align: center;
-    color: #0056b3;
+    font-family: 'Georgia, "Times New Roman", serif';
+    font-size: 26px;    
+    margin-bottom: 10px;
+    text-align: left;
+    color: #000000;
 }
 
 .section h2 {
@@ -136,7 +133,7 @@ body {
 }
 
 .content-box {
-    background: #f8f9fa;
+    background: #ffffff;
     padding: 30px;
     border-radius: 8px;
 }
@@ -152,6 +149,43 @@ body {
 
 .content-box ul li {
     margin-bottom: 8px;
+}
+
+/* CALL FOR PAPER */
+.cfp-container{
+    max-width:900px;
+    margin:120px auto 80px auto;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.cfp-title{
+    text-align:left;
+    font-size:26px;
+    color:#1d2b4f;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.cfp-content{
+    color:#6f7785;
+    font-size:18px;
+    line-height:1.9;
+}
+
+.cfp-section{
+    margin-top:40px;
+    font-size:20px;
+    color:#6f7785;
+}
+
+.cfp-content ul{
+    margin-top:10px;
+    margin-bottom:30px;
+    padding-left:30px;
+}
+
+.cfp-content li{
+    margin-bottom:10px;
 }
 
 /* ===== TABLE SCHEDULE ===== */
@@ -180,11 +214,12 @@ body {
 
 /* ===== PARTNERS ===== */
 .partners {
+    border-top: #a19f9f solid 1px;
     display: flex;
     justify-content: center;
     gap: 100px;
     padding: 60px 20px;
-    background: #f4f4f4;
+    background: #ffffff;
     flex-wrap: wrap;
 }
 
@@ -194,13 +229,13 @@ body {
 
 .partner-item h3 {
     font-size: 20px;
-    color: #000000;
+    color: #6f7785;
 }
-.partner-item p {
+.partner-item a {
     margin-bottom: 5px;
     font-size: 16px;
     font-weight: bold;
-    color: #333333;
+    color: #4c9cbb;
 }
 .partner-item img {
     width: 200px;
@@ -240,7 +275,7 @@ body {
 
 /* ===== CONTACT ===== */
 .contact-box {
-    background: #f8f9fa;
+    background: #ffffff;
     padding: 30px;
     border-radius: 8px;
     text-align: left;
@@ -257,11 +292,11 @@ body {
 
 /* ===== FOOTER ===== */
 footer {
-    background: #111;
+    background: #07184a;
     color: #fff;
     text-align: center;
     padding: 20px;
-    font-size: 14px;
+    font-size:14px;
 }
 
 /* ===== RESPONSIVE ===== */
