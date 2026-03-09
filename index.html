@@ -6,20 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header class="navbar">
     <div class="nav-container">
         <div class="logo">
-            <img src="img/logoicebsh.png" alt="Logo">
+            <a href="index.html">
+                <img src="img/logoicebsh.png" alt="Logo">
+            </a>
         </div>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="index.php" class="active">HOME</a></li>
-                <li><a href="callforpaper.php">CALL FOR PAPER</a></li>
-                <li><a href="submissions.php">SUBMISSIONS</a></li>
-                <li><a href="committee.php">COMMITTEE</a></li>
-                <li><a href="contact.php">CONTACT</a></li>
+
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+        
+         <nav>
+            <ul class="nav-menu" id="nav-menu">
+                <li class ="dropdown"><a href="index.html">HOME</a></li>
+                <li><a href="callforpaper.html">CALL FOR PAPER</a></li>
+                <li><a href="submissions.html">SUBMISSIONS</a></li>
+                <li><a href="committee.html">COMMITTEE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </div>
@@ -69,48 +77,56 @@
     <div class="partner-item">
         <h3>CO-HOST BY</h3>
         <p>
-            <a href="https://untar.ac.id" target="_blank">
+            <a href="https://eng-www.ksu.edu.tw/" target="_blank">
             Kun Shan University</a>
         </p>
         <img src="img/kunshan.png" alt="">
     </div>
 </section>
-</main>
+
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("nav-menu");
+
+    toggle.addEventListener("click", function(){
+        menu.classList.toggle("active");
+    });
+</script>
+
+<script>
+    const banner = document.querySelector('.hero-banner');
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    banner.addEventListener('mousedown', (e) => {
+        isDown = true;
+        banner.classList.add('active');
+        startX = e.pageX - banner.offsetLeft;
+        scrollLeft = banner.scrollLeft;
+    });
+
+    banner.addEventListener('mouseleave', () => {
+        isDown = false;
+    });
+
+    banner.addEventListener('mouseup', () => {
+        isDown = false;
+    });
+
+    banner.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - banner.offsetLeft;
+        const walk = (x - startX) * 2;
+        banner.scrollLeft = scrollLeft - walk;
+    });
+</script>
 
 <footer>
     Copyright© ICEBSH - Universitas Tarumanagara 2026
 </footer>
 
-<script>
-const banner = document.querySelector('.hero-banner');
-
-let isDown = false;
-let startX;
-let scrollLeft;
-
-banner.addEventListener('mousedown', (e) => {
-    isDown = true;
-    banner.classList.add('active');
-    startX = e.pageX - banner.offsetLeft;
-    scrollLeft = banner.scrollLeft;
-});
-
-banner.addEventListener('mouseleave', () => {
-    isDown = false;
-});
-
-banner.addEventListener('mouseup', () => {
-    isDown = false;
-});
-
-banner.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - banner.offsetLeft;
-    const walk = (x - startX) * 2;
-    banner.scrollLeft = scrollLeft - walk;
-});
-</script>
-
-</body>
+</body> 
 </html>

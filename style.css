@@ -1,4 +1,3 @@
-/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
@@ -6,22 +5,27 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial, Helvetica, sans-serif';
     line-height: 1.7;
     color: #222;
+    min-height: 100vh;
 }
 
 /* NAVBAR */
 .navbar {
     background: #ffffff;
     border-bottom: 1px solid #c0c0c0;
+    position:flex;
+    margin-left: auto;
+    top:0;
+    z-index:1000;
+
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 8px 20px;
     display: flex;
+    max-width: 1200px;
+    padding: 8px 20px;
     justify-content: space-between;
     align-items: center;
 }
@@ -33,7 +37,7 @@ body {
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 30px;
 }
 
 .nav-menu li a {
@@ -48,10 +52,38 @@ body {
 
 .nav-menu li a:hover {
     color: #0056b3;
+    position:relative;
 }
 
 .nav-menu li a.active {
     color: #0056b3;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.dropdown-menu{
+    position:static;
+    top:100%;
+    left:0;
+    background:white;
+    list-style:none;
+    flex-direction: column;
+    padding:10px 0;
+    min-width:180px;
+    display:none;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.dropdown-menu li{
+    padding:8px 20px;
+}
+
+.dropdown-menu li a{
+    color:#333;
+}
+
+.dropdown:hover .dropdown-menu{
+    display:block;
 }
 
 /* ===== BANNER ===== */
@@ -65,7 +97,7 @@ body {
 
 .hero-banner img {
     width: 100%;
-    min-width: 1200px;          
+    min-width: 1200px;              
     height: 100%;
     object-fit: cover;          
     display: block;
@@ -112,7 +144,7 @@ body {
     font-size: 26px;    
     margin-bottom: 10px;
     text-align: left;
-    color: #000000;
+    color: #1d2b4f;
 }
 
 .section h2 {
@@ -175,7 +207,7 @@ body {
 .cfp-section{
     margin-top:40px;
     font-size:20px;
-    color:#6f7785;
+    color: #6f7785;
 }
 
 .cfp-content ul{
@@ -242,38 +274,110 @@ body {
     height: 200px;
 }
 
-/* ===== COMMITTEE ===== */
-.committee-list p {
-    margin-bottom: 8px;
+/* ===== SUBMISSION ===== */
+
+.submission-container{
+    max-width: 1000px;
+    margin: 120px auto 80px auto;
+    padding: 40px;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
-.committee-title {
-    margin-top: 30px;
-    font-weight: bold;
+.submission-title{
+    text-align: left;
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+
+.submission-content{
+    color: #6f7785;
+    line-height: 1.8;
     font-size: 18px;
-    color: #0056b3;
+}
+
+.submission-section{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.submission-content ul{
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.submission-content li{
+    margin-bottom: 10px;
+}
+
+.link-highlight{
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-highlight:hover{
+    text-decoration: underline;
+}
+
+/* ===== COMMITTEE ===== */
+.committee-container{
+max-width: 1100px;
+margin: 120px auto 80px auto;
+padding: 40px;
+font-family: Georgia, "Times New Roman", serif;
+}
+
+.committee-title-main{
+text-align: left;
+font-size: 28px;
+margin-bottom: 40px;
+}
+
+.committee-content{
+font-size: 18px;
+line-height: 1.8;
+color: #6f7785;
+}
+
+.committee-section{
+font-size: 22px;
+font-weight: bold;
+margin-top: 40px;
+margin-bottom: 20px;
 }
 
 .committee-row{
-    display:flex;
-    margin-bottom:12px;
+display: grid;
+grid-template-columns: 220px 20px auto;
+margin-bottom: 15px;
 }
 
 .committee-role{
-    width:220px;
-    font-weight:bold;
-}
-
-.committee-sep{
-    width:20px;
+font-weight: bold;
 }
 
 .committee-names{
-    flex:1;
-    line-height:1.6;
+line-height: 1.7;
+}
+
+.scientific-list{
+margin-top: 10px;
+padding-left: 20px;
+}
+
+.scientific-list li{
+margin-bottom: 6px;
 }
 
 /* ===== CONTACT ===== */
+.contact-section{
+    padding:60px 20px;
+    max-width:1000px;
+    margin:auto;
+    min-height:70vh;
+}
+
 .contact-box {
     background: #ffffff;
     padding: 30px;
@@ -290,6 +394,10 @@ body {
     color: #0056b3;
 }
 
+.contact-page{
+    min-height:calc(100vh - 160px);
+}   
+
 /* ===== FOOTER ===== */
 footer {
     background: #07184a;
@@ -300,16 +408,37 @@ footer {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
 
-    .nav-menu {
-        flex-direction: column;
-        gap: 15px;
+@media (max-width:768px){
+
+    .menu-toggle{
+        display:block;
     }
 
-    .partners {
-        flex-direction: column;
-        gap: 40px;
+    .nav-menu{
+        position:absolute;
+        top:70px;
+        right:0;
+        background:white;
+        width:100%;
+        flex-direction:column;
+        align-items:center;
+        display:none;
+        padding:20px 0;
+    }
+
+    .nav-menu.active{
+        display:flex;
+    }
+
+    .dropdown-menu{
+        position:static;
+        box-shadow:none;
     }
 
 }

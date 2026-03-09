@@ -12,15 +12,22 @@
 <header class="navbar">
     <div class="nav-container">
         <div class="logo">
-            <img src="img/logoicebsh.png" alt="Logo">
+            <a href="index.html">
+                <img src="img/logoicebsh.png" alt="Logo">
+            </a>
         </div>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="index.php">HOME</a></li>
-                <li><a href="callforpaper.php" class="active">CALL FOR PAPER</a></li>
-                <li><a href="submissions.php">SUBMISSIONS</a></li>
-                <li><a href="committee.php">COMMITTEE</a></li>
-                <li><a href="contact.php">CONTACT</a></li>
+
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+        
+         <nav>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li class ="dropdown"><a href="callforpaper.html">CALL FOR PAPER</a></li>
+                <li><a href="submissions.html">SUBMISSIONS</a></li>
+                <li><a href="committee.html">COMMITTEE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </div>
@@ -132,6 +139,15 @@
 <footer>
     Copyright ICEBSH - Universitas Tarumanagara 2026
 </footer>
+
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("nav-menu");
+
+    toggle.addEventListener("click", function(){
+        menu.classList.toggle("active");
+    });
+</script>
 
 </body>
 </html>
