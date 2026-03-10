@@ -95,37 +95,6 @@
     });
 </script>
 
-<script>
-    const banner = document.querySelector('.hero-banner');
-
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    banner.addEventListener('mousedown', (e) => {
-        isDown = true;
-        banner.classList.add('active');
-        startX = e.pageX - banner.offsetLeft;
-        scrollLeft = banner.scrollLeft;
-    });
-
-    banner.addEventListener('mouseleave', () => {
-        isDown = false;
-    });
-
-    banner.addEventListener('mouseup', () => {
-        isDown = false;
-    });
-
-    banner.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - banner.offsetLeft;
-        const walk = (x - startX) * 2;
-        banner.scrollLeft = scrollLeft - walk;
-    });
-</script>
-
 <footer>
     Copyright© <a href="index.html">ICEBSH</a> - Universitas Tarumanagara 2026
 </footer>
